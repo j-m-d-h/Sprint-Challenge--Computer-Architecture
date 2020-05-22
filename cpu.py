@@ -16,11 +16,13 @@ class CPU:
         self.ram = [0] * 256
         self.pc = 0
 
+        """Table for ALU instructions."""
         self.alu_table = {
             162:'MUL',
             167:'CMP'
         }
 
+        """Table for non-ALU instructions."""
         self.instruction_table = {
             0:self.NOP,
             1:self.HALT,
